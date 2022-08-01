@@ -1,8 +1,23 @@
 // Assignment code here
 
+const keys = {
+  letter: "ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  number: "0123456789"
+  symbol: "!@#$%^&*()_+~\`|}{[]:;?><,./-=",
+};
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+const getKey = [
+  function letter() {
+    return keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)];
+  },
+  function number() {
+    return keys.number[Math.floor(Math.random() * keys.number.length)];
+  },
+  function symbol() {
+    return keys.symbol[Math.floor(Math.random() * keys.symbol.length)];
+  }
+];
+
 
 // Write password to the #password input
 function writePassword() {
@@ -11,7 +26,9 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate")
