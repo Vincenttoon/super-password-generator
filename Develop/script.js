@@ -5,29 +5,14 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log("Hey! You clicked the button!");
   
-  const lowerCaseCheck = confirm("Would you like to use lower case letters?");
-    if (lowerCaseCheck) {
-      pwdString = lowerCase;
-    }
-    console.log(pwdString);
+  lengthOfPwd = window.prompt("How long would you like your password to be? Please choose between 8 - 128 characters.");
+  if (lengthOfPwd < 8 || lengthOfPwd > 128 ) {
+    return "Please choose a character length between 8 and 128.";
+  } else { 
+      window.alert("Your password will be" + lenghtOfPwd + "characters.");
+  }
 
-  const upperCaseCheck = confirm("Would you like to use upper case letters?");
-    if (upperCaseCheck) {
-      let pwdString = upperCase;
-    }
-
-  const numListCheck = confirm("Would you like to use numbers?");
-    if (numListCheck) {
-      let pwdString = numList;
-    }
-
-  const specCharCheck = confirm("Would you like to use special characters?");
-    if (specCharCheck) {
-      let pwdString = specChar;
-    };
-
-  console.log(pwdString);
-
+  console.log(lengthOfPwd);
 
 
 
