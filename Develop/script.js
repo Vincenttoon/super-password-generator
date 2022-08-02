@@ -31,6 +31,22 @@ function generatePassword() {
     window.alert = ("Your password WILL NOT include upper case letters.");
   }
 
+  // Same previous two, but for numbers
+  numberCheck = window.confirm("Would you like to include numbers?");
+  if (numberCheck) {
+    window.alert ("Your password WILL include upper case letters!");
+  } else {
+    window.alert ("Your password WILL NOT include numbers.");
+  }
+
+  // Same as previous three, but for special characters
+  symbolCheck = window.confirm ("Would you like to include special characters?");
+  if (symbolCheck) {
+    window.alert ("Your password WILL include special characters!");
+  } else {
+    window.alert ("Your password WILL NOT include special characters.");
+  }
+  
   console.log(lengthOfPwd);
 
 
@@ -45,12 +61,17 @@ function generatePassword() {
   return "Generated Password here";
 };
 
+// variables to create password
 const pwdlength = [8 <= 128];
 const lowerCase = ['abcdefghijklmnopqrstuvwxyz'];
 const upperCase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 const numList = ['123456789'];
 const specChar = ['!@#$%^&*+=?'];
 const pwdString = '';
+
+// merge prompt info into pwdString
+
+
 
 // Write password to the #password input
 function writePassword() {
