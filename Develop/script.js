@@ -9,7 +9,7 @@ function generatePassword() {
   lengthOfPwd = window.prompt("How long would you like your password to be? Please choose between 8 - 128 characters.");
   if (lengthOfPwd < 8 || lengthOfPwd > 128 ) {
     // returns user to length of window prompt
-    return "Please choose a character length between 8 and 128.";\
+    return "Please choose a character length between 8 and 128.";
     // confirms length of lengthOfPwd
   } else { 
       window.alert("Your password will be" + lenghtOfPwd + "characters.");
@@ -46,7 +46,7 @@ function generatePassword() {
   } else {
     window.alert ("Your password WILL NOT include special characters.");
   }
-  
+
   console.log(lengthOfPwd);
 
 
@@ -58,7 +58,19 @@ function generatePassword() {
       // 2. Validate the input
 
       // 3.Display password on the page
+
+        // variables to create password
+  const pwdlength = [8 <= 128];
+  const lowerCase = ['abcdefghijklmnopqrstuvwxyz'];
+  const upperCase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+  const numList = ['123456789'];
+  const specChar = ['!@#$%^&*+=?'];
+  const pwdString = '';
+
+  
   return "Generated Password here";
+
+  // variables to create password
 };
 
 // variables to create password
