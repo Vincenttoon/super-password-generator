@@ -19,7 +19,7 @@ function generatePassword() {
     return "Please choose a character length between 8 and 128.";
     // confirms length of lengthOfPwd
   } else { 
-    window.alert(" Your password will be " + lengthOfPwd + " characters. ");
+    window.alert = (" Your password will be " + lengthOfPwd + " characters. ");
   }
 
   // confirm window for lower case letters, using confirm to only allow 2 possible choices
@@ -74,12 +74,12 @@ function generatePassword() {
   //random math function...
   let thePassword = "";
   for (let i = 0; i < lengthOfPwd; i++) {
-    const randNum = [Math.floor(Math.random() * pwdString.length)];
+    var randNum = [Math.floor(Math.random() * pwdString.length)];
     thePassword = thePassword + pwdString[randNum];
   }
 
   console.log(thePassword);
-  return "Generated Password here";
+  return thePassword;
 
   // variables to create password
 };
