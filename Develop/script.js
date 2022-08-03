@@ -59,7 +59,7 @@ function generatePassword() {
     pwdString = pwdString.concat(lowerCase);
   }
 
-  if (upperCase) {
+  if (upperCaseCheck) {
     pwdString = pwdString.concat(upperCase);
   }
 
@@ -71,6 +71,11 @@ function generatePassword() {
     pwdString = pwdString.concat(specChar);
   }
 
+  // need all false reaction to user
+  if (lowerCaseCheck === false + upperCaseCheck === false + numberCheck === false + symbolCheck === false) {
+    window.alert("Please select one possible password function next time.");
+  }
+
   //random math function...
   let thePassword = "";
   for (let i = 0; i < lengthOfPwd; i++) {
@@ -80,13 +85,7 @@ function generatePassword() {
 
   console.log(thePassword);
   return thePassword;
-
-  // variables to create password
 };
-
-// merge prompt info into pwdString
-
-
 
 // Write password to the #password input
 function writePassword() {
