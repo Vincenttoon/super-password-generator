@@ -1,18 +1,25 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
 
-
 function generatePassword() {
+
+  // variables to create password
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numList = '123456789';
+  var specChar = '!@#$%^&*+=?';
+  var pwdString = '';
+
   console.log("Hey! You clicked the button!");
 
     // prompt for length of password
-  lengthOfPwd = window.prompt("How long would you like your password to be? Please choose between 8 - 128 characters.");
+  var lengthOfPwd = window.prompt("How long would you like your password to be? Please choose between 8 - 128 characters.");
   if (lengthOfPwd < 8 || lengthOfPwd > 128 ) {
     // returns user to length of window prompt
     return "Please choose a character length between 8 and 128.";
     // confirms length of lengthOfPwd
   } else { 
-      window.alert(" Your password will be " + lengthOfPwd + " characters. ");
+    window.alert(" Your password will be " + lengthOfPwd + " characters. ");
   }
 
   // confirm window for lower case letters, using confirm to only allow 2 possible choices
@@ -33,7 +40,7 @@ function generatePassword() {
 
   // Same previous two, but for numbers
   numberCheck = window.confirm("Would you like to include numbers?");
-  if (numberCheck) {
+  if (numberCheck = true) {
     window.alert = ("Your password WILL include upper case letters!");
   } else {
     window.alert = ("Your password WILL NOT include numbers.");
@@ -59,49 +66,23 @@ function generatePassword() {
   if (numberCheck) {
     pwdString = pwdString.concat(numList);
   }
-  
+
   if (symbolCheck) {
     pwdString = pwdString.concat(specChar);
   }
 
   //random math function...
+  let thePassword = "";
   for (let i = 0; i < lengthOfPwd; i++) {
-    const randNum = [Math.floor(Math.random() * pwdlength)];
+    const randNum = [Math.floor(Math.random() * pwdString)];
+    thePassword = thePassword + pwdString
   }
 
-  console.log(pwdString);
-
-
-
-
-  console.log(pwdString);
-
-
-      // 2. Validate the input
-
-      // 3.Display password on the page
-
-        // variables to create password
-  const pwdlength = [8 <= 128];
-  const lowerCase = ['abcdefghijklmnopqrstuvwxyz'];
-  const upperCase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-  const numList = ['123456789'];
-  const specChar = ['!@#$%^&*+=?'];
-  const pwdString = [];
-
-
+  console.log(thePassword);
   return "Generated Password here";
 
   // variables to create password
 };
-
-// variables to create password
-const pwdlength = [8 <= 128];
-const lowerCase = ['abcdefghijklmnopqrstuvwxyz'];
-const upperCase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-const numList = ['123456789'];
-const specChar = ['!@#$%^&*+=?'];
-const pwdString = '';
 
 // merge prompt info into pwdString
 
