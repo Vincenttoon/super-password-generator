@@ -88,6 +88,7 @@ header {
   cursor: pointer;
 }
 
+/* copied css for copy btn */
 .copybtn {
   border: none;
   background-color: #89cff0;
@@ -142,6 +143,7 @@ button[disabled] {
     padding: 10px 15px;
   }
 
+  /* created media adj for copybtn */
   .copybtn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -158,6 +160,7 @@ button[disabled] {
     font-size: 0.8rem;
   }
 
+  /* created media adj. for copybtn */
   .copybtn {
     font-size: 0.8rem;
   }
