@@ -47,13 +47,25 @@ function generatePassword() {
     window.alert ("Your password WILL NOT include special characters.");
   }
 
-  console.log(lengthOfPwd);
+  // use concat to assign value to password string
+  if (lowerCaseCheck) {
+    pwdString = pwdString.concat(lowerCase);
+  }
+  if (upperCase) {
+    pwdString = pwdString.concat(upperCase);
+  }
+  if (numberCheck) {
+    pwdString = pwdString.concat(numList);
+  }
+  if (symbolCheck) {
+    pwdString = pwdString.concat(specChar);
+  }
+
+  //need to create random math vairable...
 
 
+  console.log(pwdString);
 
-      // 1. Prompt User for the password criteria
-     //  a. Password length 8 < 128
-      //  b. Lowercase, uppercase, numbers, special characters
 
       // 2. Validate the input
 
@@ -67,7 +79,7 @@ function generatePassword() {
   const specChar = ['!@#$%^&*+=?'];
   const pwdString = '';
 
-  
+
   return "Generated Password here";
 
   // variables to create password
