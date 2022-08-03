@@ -5,7 +5,7 @@
 ### Challenge 3
 
 ## Live Deployment Link
-[Random Password Generator](*...)
+[Random Password Generator](https://vincenttoon.github.io/super-password-generator/)
 
 ## Instructions for Challenge
 
