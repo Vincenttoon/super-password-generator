@@ -74,8 +74,8 @@ function generatePassword() {
   //random math function...
   let thePassword = "";
   for (let i = 0; i < lengthOfPwd; i++) {
-    const randNum = [Math.floor(Math.random() * pwdString)];
-    thePassword = thePassword + pwdString
+    const randNum = [Math.floor(Math.random() * pwdString.length)];
+    thePassword = thePassword + pwdString[randNum];
   }
 
   console.log(thePassword);
