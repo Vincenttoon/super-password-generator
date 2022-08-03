@@ -36,7 +36,3 @@ Use Javascript functions and statements to create a fully functional password ge
 - THEN a password is generated that matches the selected criteria
 - WHEN the password is generated
 - THEN the password is either displayed in an alert or written to the page
-
-### Developer Notes
-
-This was HARD. A huge step up in difficulty from the previous two challenges. It felt like a lifetime trying to get anything to get anything functioning. Once I figured out the if/else statements things sped up a bit and I started to understand what I was doing a little more. Putting the For loop and Math.random held me up too.
