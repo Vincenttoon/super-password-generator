@@ -125,3 +125,5 @@ function copyBtn() {
       console.log('something went wrong', err);
     });
 }
+
+// checking git status
