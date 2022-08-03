@@ -32,7 +32,7 @@ function generatePassword() {
     window.alert("Your password WILL NOT include lower case letters.");
   }
 
-  console.log("You decided on lower case alphabet in your password.");
+  console.log("You decided on IF lower case alphabet in your password.");
 
   // confirm window for upper case letter, same thought process as above
   upperCaseCheck = window.confirm("Would you like to include upper case letters?");
@@ -42,7 +42,7 @@ function generatePassword() {
     window.alert("Your password WILL NOT include upper case letters.");
   }
 
-  console.log("You decided on upper case alphabet in your password.");
+  console.log("You decided on IF upper case alphabet in your password.");
 
   // Same previous two, but for numbers
   numberCheck = window.confirm("Would you like to include numbers?");
@@ -52,7 +52,7 @@ function generatePassword() {
     window.alert("Your password WILL NOT include numbers.");
   }
 
-  console.log("You decided on numbers in your password.");
+  console.log("You decided on IF numbers in your password.");
 
   // Same as previous three, but for special characters
   symbolCheck = window.confirm ("Would you like to include special characters?");
@@ -62,7 +62,7 @@ function generatePassword() {
     window.alert("Your password WILL NOT include special characters.");
   }
 
-  console.log("You decided on special characters in your password.");
+  console.log("You decided on IF special characters in your password.");
 
   // use concat to assign value to password string
   if (lowerCaseCheck) {
@@ -111,12 +111,17 @@ generateBtn.addEventListener("click", writePassword);
 
 // Java for copying button to Clipboard
 function copyBtn() {
-  var copyText = document.getElementById("password");
+  var copyText = document.getElementById('password');
 
   copyText.select();
   copyText.setSelectionRange(0, 99999);
 
-  navigator.clipboard.writeText(copyText.value);
-
-  window.alert("Copied the text: " + copyText.value);
+  navigator.clipboard
+    .writeText(copyText.value.trim())
+    .then(() => {
+      console.log('Copied');
+    })
+    .catch((err) => {
+      console.log('something went wrong', err);
+    });
 }
