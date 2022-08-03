@@ -72,7 +72,7 @@ function generatePassword() {
   }
 
   // need all false reaction to user
-  if (lowerCaseCheck === false + upperCaseCheck === false + numberCheck === false + symbolCheck === false) {
+  if (lowerCaseCheck === false && upperCaseCheck === false && numberCheck === false && symbolCheck === false) {
     window.alert("Please select one possible password function next time.");
   }
 
