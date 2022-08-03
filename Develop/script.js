@@ -22,6 +22,8 @@ function generatePassword() {
     window.alert(" Your password will be " + lengthOfPwd + " characters. ");
   }
 
+  console.log("You decided password length");
+
   // confirm window for lower case letters, using confirm to only allow 2 possible choices
   lowerCaseCheck = window.confirm("Would you like to include lower case letters?");
   if (lowerCaseCheck) {
@@ -29,6 +31,8 @@ function generatePassword() {
   } else {
     window.alert("Your password WILL NOT include lower case letters.");
   }
+
+  console.log("You decided on IF lower case alphabet in your password.");
 
   // confirm window for upper case letter, same thought process as above
   upperCaseCheck = window.confirm("Would you like to include upper case letters?");
@@ -38,6 +42,8 @@ function generatePassword() {
     window.alert("Your password WILL NOT include upper case letters.");
   }
 
+  console.log("You decided on IF upper case alphabet in your password.");
+
   // Same previous two, but for numbers
   numberCheck = window.confirm("Would you like to include numbers?");
   if (numberCheck = true) {
@@ -46,6 +52,8 @@ function generatePassword() {
     window.alert("Your password WILL NOT include numbers.");
   }
 
+  console.log("You decided on IF numbers in your password.");
+
   // Same as previous three, but for special characters
   symbolCheck = window.confirm ("Would you like to include special characters?");
   if (symbolCheck) {
@@ -53,6 +61,8 @@ function generatePassword() {
   } else {
     window.alert("Your password WILL NOT include special characters.");
   }
+
+  console.log("You decided on IF special characters in your password.");
 
   // use concat to assign value to password string
   if (lowerCaseCheck) {
@@ -98,3 +108,20 @@ function writePassword() {
 
 // Get references to the #generate element
 generateBtn.addEventListener("click", writePassword);
+
+// Java for copying button to Clipboard
+function copyBtn() {
+  var copyText = document.getElementById('password');
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard
+    .writeText(copyText.value.trim())
+    .then(() => {
+      console.log('Copied');
+    })
+    .catch((err) => {
+      console.log('something went wrong', err);
+    });
+}
