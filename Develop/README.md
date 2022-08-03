@@ -1,4 +1,4 @@
-![screenshot of front page](./images/password-front.png)
+![screenshot of front page](./images/password-home.png)
 ![screenshot of front page functioning](./images/password-func.png)
 
 # Random Password Generator
