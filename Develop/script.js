@@ -82,7 +82,7 @@ function generatePassword() {
   }
 
   // need all false reaction to user
-  if (lowerCaseCheck === false + upperCaseCheck === false + numberCheck === false + symbolCheck === false) {
+  if (lowerCaseCheck === false && upperCaseCheck === false && numberCheck === false && symbolCheck === false) {
     window.alert("Please select one possible password function next time.");
   }
 
@@ -108,3 +108,15 @@ function writePassword() {
 
 // Get references to the #generate element
 generateBtn.addEventListener("click", writePassword);
+
+// Java for copying button to Clipboard
+function copyBtn() {
+  var copyText = document.getElementById("password");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+
+  window.alert("Copied the text: " + copyText.value);
+}
