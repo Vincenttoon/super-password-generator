@@ -25,7 +25,7 @@ function generatePassword() {
   // confirm window for lower case letters, using confirm to only allow 2 possible choices
   lowerCaseCheck = window.confirm("Would you like to include lower case letters?");
   if (lowerCaseCheck) {
-    window.alert = ("Your password WILL include lower case letters!");
+    var lowerCaseCheckYes = window.alert("Your password WILL include lower case letters!");
   } else {
     window.alert = ("Your password WILL NOT include lower case letters.");
   }
